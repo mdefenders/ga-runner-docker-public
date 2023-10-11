@@ -1,6 +1,7 @@
 # GitHub Actions Runner for docker builds
 _This repo is a reference clone of the original private docker image repo, which uses self-hosted GitHub Actions runners, 
 disabled for public repos._
+To be used with [myHomeBee home server](https://github.com/mdefenders/myHomeBee.git)
 ## How to use
 
 ```bash
