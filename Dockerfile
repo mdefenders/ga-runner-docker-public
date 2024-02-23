@@ -1,6 +1,5 @@
 ARG DEBIAN_FRONTEND=noninteractive
 ARG DOCKER_GUID=109
-ARG RUNNER_VERSION="2.309.0"
 
 FROM debian:bookworm as downloader
 ARG DEBIAN_FRONTEND
