@@ -23,7 +23,8 @@ fi
 
 cleanup() {
   echo "Removing runner..."
-  /home/docker/actions-runner/config.sh remove --token ${REG_TOKEN}
+  RM_TOKEN=$(curl -sX POST -H "Authorization: token ${GITHUB_TOKEN}" https://api.github.com/orgs/"${GITHUB_ORGANIZATION}"/actions/runners/remove-token | jq .token --raw-output)
+  /home/docker/actions-runner/config.sh remove --token ${RM_TOKEN}
 }
 
 trap 'cleanup; exit 130' INT
